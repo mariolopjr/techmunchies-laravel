@@ -16,7 +16,7 @@ before_script:
   - npm install
 
 before_install:
-  - mysql -e 'CREATE DATABASE travis;'
+  - mysql -e 'CREATE DATABASE laravel;'
 
 script:
   - phpdbg -qrr vendor/bin/phpunit
