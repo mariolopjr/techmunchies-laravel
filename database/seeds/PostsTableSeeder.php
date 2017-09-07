@@ -1,8 +1,11 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use App\Post;
 
-class DatabaseSeeder extends Seeder
+use Faker\Factory as Faker;
+
+class PostsTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -11,6 +14,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        $this->call(PostsTableSeeder::class);
+        Post::truncate();
+        factory(Post::class, 100)->create();
     }
 }

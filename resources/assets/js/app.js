@@ -9,7 +9,6 @@ require('./bootstrap');
 
 window.Vue = require('vue');
 
-import NProgress from 'vue-nprogress';
 import Buefy from 'buefy';
 import 'buefy/lib/buefy.css'
 
@@ -19,34 +18,48 @@ import 'buefy/lib/buefy.css'
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-Vue.component(
-    'nprogress',
-    require('./components/NProgress.vue'
-));
-
 Vue.use(Buefy, {
-    defaultIconPack: 'fa'
+	defaultIconPack: 'fa'
 });
 
 Vue.component(
-    'advanced-search-form',
-    require('./components/AdvancedSearchForm.vue'
-));
+  'home',
+  require('./components/Home.vue')
+);
 
-Vue.use(NProgress);
+Vue.component(
+  'blog',
+  require('./components/Blog.vue')
+);
 
-const nprogress = new NProgress({ parent: '.nprogress-container'  });
+Vue.component(
+  'site-nav',
+  require('./components/Nav.vue')
+);
+
+Vue.component(
+  'background-info',
+  require('./components/BackgroundInfo.vue')
+);
+
+Vue.component(
+  'post',
+  require('./components/Post.vue')
+);
+
+Vue.component(
+  'post-snippet',
+  require('./components/PostSnippet.vue')
+);
 
 const app = new Vue({
     el: '#app',
-    nprogress,
 
     mounted() {
-        this.$nprogress.done();
+      //
     },
 
     created() {
-        this.$nprogress.start();
         //
     }
 });

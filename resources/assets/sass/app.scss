@@ -3,7 +3,141 @@
 @import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
 
 // Variables
-@import "variables";
+@import 'variables';
 
-// Bootstrap
-@import "~bootstrap-sass/assets/stylesheets/bootstrap";
+[v-cloak] {
+  display: none;
+}
+
+nav {
+  font-size: .8rem;
+  letter-spacing: 1.5px;
+
+  .nav-left {
+    .nav-item {
+      font-size: .9rem;
+      letter-spacing: 1.7px;
+    }
+  }
+}
+
+.home.hero {
+  background-attachment: fixed;
+  background-image: url('/images/background.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  nav a {
+    color: $nav-text-color-home;
+
+    &:active,
+    &:focus,
+    &:hover {
+      color: $nav-text-color-home;
+    }
+  }
+
+  > .hero-body > .container {
+    margin-bottom: 60vh;
+
+  }
+
+  .title,
+  .subtitle {
+    color: $home-hero-color;
+    font-size: 16px;
+    font-weight: 200;
+  }
+
+  .title {
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  > .hero-foot {
+    color: $footer-text-color-home;
+    font-size: .6rem;
+    font-weight: 400;
+
+    > p {
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.blog {
+  nav {
+    margin-bottom: 70px;
+  }
+}
+
+// Home Background Picture Info Container
+.background-info {
+  bottom: 15px;
+  left: 15px;
+  position: absolute;
+}
+
+.background-container {
+  background-color: $home-background-container;
+  border-radius: 16px;
+  color: $home-background-text;
+  cursor: default;
+  display: inline-block;
+  font-size: 18px;
+  font-weight: bold;
+  height: 30px;
+  line-height: 30px;
+  position: relative;
+  text-align: center;
+  width: 30px;
+
+  &:hover {
+    background-color: $home-background-container-hover;
+  }
+}
+
+.background-popover {
+  background-color: $home-background-popover;
+  border-radius: 3px;
+  bottom: 38px;
+  color: $home-background-popover-text;
+  left: 80px;
+  padding: 3px 8px;
+  position: absolute;
+  text-align: left;
+  transform: translateX(-50%);
+  transition: opacity .2s ease-in-out;
+  white-space: nowrap;
+
+  > span {
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  > .label {
+    color: $home-background-popover-label;
+    font-size: 12px;
+    letter-spacing: 1.2px;
+    line-height: 18px;
+    margin: 5px 3px 0;
+    text-transform: uppercase;
+  }
+
+  > .answer {
+    font-size: 12px;
+    line-height: 18px;
+    margin: 0 3px 5px;
+  }
+
+  a {
+    color: $home-background-popover-a;
+
+    &:hover {
+      color: $home-background-popover-a-hover;
+      text-decoration: none;
+    }
+  }
+}
