@@ -12,11 +12,11 @@ before_script:
   - composer self-update
   - composer install --no-interaction
   - php artisan key:generate
-  - php artisan migrate
+  - php artisan migrate:fresh --seed
   - npm install
 
 before_install:
-  - mysql -e 'CREATE DATABASE laravel;'
+  - mysql -e 'CREATE DATABASE laravel CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;'
 
 script:
   - phpdbg -qrr vendor/bin/phpunit
@@ -31,3 +31,4 @@ cache:
   directories:
     - node_modules
     - vendor
+    - $HOME/.composer/cache
