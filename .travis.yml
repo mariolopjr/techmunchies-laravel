@@ -32,3 +32,10 @@ cache:
     - node_modules
     - vendor
     - $HOME/.composer/cache
+
+addons:
+  apt:
+    sources:
+      - mysql-5.7-trusty
+    packages:
+      - mysql-server
