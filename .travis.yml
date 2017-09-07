@@ -1,7 +1,7 @@
 language: php
 
 php:
-  - 7.0
+  - 7.1
 
 node_js:
   - "node"
@@ -19,7 +19,10 @@ before_install:
   - mysql -e 'CREATE DATABASE travis;'
 
 script:
-  - phpdbg -qrr vendor/bin/phpunit --coverage-clover=coverage.xml
+  - phpdbg -qrr vendor/bin/phpunit
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
 
 services:
   - mysql
