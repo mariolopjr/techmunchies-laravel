@@ -1,7 +1,12 @@
 <template lang="pug">
   #blog
-    <site-nav></site-nav>
-    <post-snippet v-for="post in posts.data" :post="post" :key="post.id"></post-snippet>
+    site-nav
+    .post-snippet-container
+      post-snippet(
+        v-for='post in posts.data'
+        :post='post'
+        :key='post.id'
+      )
 </template>
 
 <script>

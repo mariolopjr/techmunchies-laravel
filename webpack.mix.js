@@ -27,4 +27,6 @@ mix
    })
 	.extract(['axios', 'buefy', 'lodash', 'vue', 'vue-nprogress']);
 
-mix.browserSync('techmunchies.dev');
+mix.browserSync('techmunchies.dev', {
+  browser: "google chrome"
+});

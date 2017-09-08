@@ -9,5 +9,5 @@ nav.nav
   .nav-right.nav-menu
     a(href="/").nav-item home
     a(href="/blog").nav-item blog
-    span.nav-item: a(href="/"): span.icon: i.fa.fa-gitlab
+    span.nav-item: a(href="https://github.com/mariolopjr"): span.icon: i.fa.fa-github
 </template>

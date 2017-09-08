@@ -131,3 +131,8 @@ nav .nav-left .nav-item {
   text-decoration: none;
 }
 
+.post-snippet-container {
+  margin: 0 auto;
+  max-width: 42rem;
+}
+
