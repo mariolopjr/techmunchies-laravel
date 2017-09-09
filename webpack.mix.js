@@ -25,8 +25,11 @@ mix
        require('autoprefixer')
      ]
    })
-	.extract(['axios', 'buefy', 'lodash', 'vue', 'vue-nprogress']);
+	.extract(['axios', 'buefy', 'lodash', 'vue']);
 
-mix.browserSync('techmunchies.dev', {
-  browser: "google chrome"
+mix.browserSync({
+  browser: 'google chrome',
+  host: 'techmunchies.dev',
+  open: 'external',
+  proxy: 'techmunchies.dev',
 });

@@ -12,6 +12,15 @@ window.Vue = require('vue');
 import Buefy from 'buefy';
 import 'buefy/lib/buefy.css'
 
+// Sentry Integration
+import Raven from 'raven-js';
+import RavenVue from 'raven-js/plugins/vue';
+
+Raven
+    .config('https://4962022e5dfe48c0868844ae3de75f45@sentry.io/214311')
+    .addPlugin(RavenVue, Vue)
+    .install();
+
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -35,6 +44,11 @@ Vue.component(
 Vue.component(
   'site-nav',
   require('./components/Nav.vue')
+);
+
+Vue.component(
+  'site-footer',
+  require('./components/Footer.vue')
 );
 
 Vue.component(

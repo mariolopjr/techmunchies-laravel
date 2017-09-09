@@ -12,6 +12,7 @@
 nav {
   font-size: .8rem;
   letter-spacing: 1.5px;
+  margin: 0 2rem;
 
   .nav-left {
     .nav-item {
@@ -21,12 +22,21 @@ nav {
   }
 }
 
+.blog .footer {
+  background-color: $footer-background-color;
+  padding: 3rem 1.5rem 1.5rem;
+}
+
 .home.hero {
   background-attachment: fixed;
   background-image: url('/images/background.jpg');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
+
+  nav {
+    box-shadow: none;
+  }
 
   nav a {
     color: $nav-text-color-home;
@@ -64,12 +74,6 @@ nav {
       letter-spacing: 1.5px;
       text-transform: uppercase;
     }
-  }
-}
-
-.blog {
-  nav {
-    margin-bottom: 70px;
   }
 }
 
@@ -144,6 +148,16 @@ nav {
 
 // Post Snippets
 .post-snippet-container {
-  margin: 0 auto;
+  margin: 4rem auto;
   max-width: 42rem;
+
+  .snippet {
+    .title {
+      margin-bottom: .7rem;
+    }
+
+    .excerpt {
+      margin-bottom: 1rem;
+    }
+  }
 }
