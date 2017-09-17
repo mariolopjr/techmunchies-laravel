@@ -1,0 +1,10 @@
+version: '3.3'
+
+services:
+  # Laravel PHP App
+  app:
+    build:
+      context: ./
+      dockerfile: app.dockerfile
+    worker_dir: /var/www
+    volumes:

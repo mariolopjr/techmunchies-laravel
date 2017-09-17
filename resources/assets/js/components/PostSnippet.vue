@@ -1,7 +1,7 @@
 <template lang="pug">
 article.snippet
   p.date: small {{ date }}
-  p.title {{ post.title }}
+  p.title: a(:href='url') {{ post.title }}
   p.excerpt {{ post.body.substring(0, 100) }}
   hr
 </template>
@@ -22,6 +22,9 @@ export default {
   computed: {
     date: function() {
       return moment(this.post.created_at).format('MMM DD, YYYY')
+    },
+    url: function() {
+      return route('posts.show', { post: this.post.slug })
     }
   },
 }

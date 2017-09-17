@@ -20,4 +20,11 @@ Route::get('/blog', function () {
 });
 
 // Posts
-Route::get('/posts', 'PostController@index');
+Route::group(['prefix' => 'posts', 'as' => 'posts.'], function () {
+    Route::get('/', 'PostController@index')
+        ->name('index');
+    Route::get('/{post}', 'PostController@show')
+        ->name('show');
+    Route::post('/', 'PostController@store')
+        ->name('store');
+});

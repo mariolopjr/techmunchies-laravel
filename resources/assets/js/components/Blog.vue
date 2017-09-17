@@ -1,5 +1,5 @@
 <template lang="pug">
-.blog
+.blog.v-cloak--hidden
   site-nav
   .post-snippet-container
     post-snippet(
@@ -31,7 +31,7 @@ export default {
 
   mounted() {
     axios
-      .get('/posts')
+      .get(route('posts.index'))
       .then(response => this.posts = response.data['posts']);
   }
 }

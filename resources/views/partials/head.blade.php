@@ -17,3 +17,4 @@
 <body>
 <div id="app">
     <div v-cloak>
+        <span class="v-cloak--inline">Loading...</span>
