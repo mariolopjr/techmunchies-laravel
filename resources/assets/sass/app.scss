@@ -56,12 +56,12 @@ nav {
   background-repeat: no-repeat;
   background-size: cover;
 
-  &.no-webp {
-    background-image: url('/images/background.jpg');
+  .webp & {
+    background-image: url('/images/background.webp');
   }
 
-  &.webp {
-    background-image: url('/images/background.webp');
+  .no-webp & {
+    background-image: url('/images/background.jpg');
   }
 
   .no-js & {
